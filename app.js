@@ -88,10 +88,7 @@ function MenuSearchService($http, ApiBasePath) {
 
     return $http({
       method: "GET",
-      url: (ApiBasePath + "/menu_items.json"),
-      params: {
-        category: ""
-      }
+      url: (ApiBasePath + "/menu_items.json")
     }).then(function (response) {
       console.log("promise result: ", response.data);
       var filteredItems = [];
